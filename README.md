@@ -192,7 +192,7 @@ local checkpoint path does not change.
 ```bibtex
 @article{xiong2026memlife,
   title={MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories},
-  author={Xiong, Guangzhi and Zhang, Xinyuan and Yang, Xiao and Yun, Hyokun and Zhang, Kai and Kuo, Shiun-Zu and Ha, Hyeonjeong and Chen, Xilun and Sun, Kai and Liang, Lucas and others},
+  author={Guangzhi Xiong and Xinyuan Zhang and Xiao Yang and Hyokun Yun and Kai Zhang and Shiun-Zu Kuo and Hyeonjeong Ha and Xilun Chen and Kai Sun and Lucas Liang and Guangqiang Dong and Ejaz Ahmed and Ahmed A Aly and Anuj Kumar and Raffay Hamid and Aidong Zhang and Xin Luna Dong},
   journal={arXiv preprint arXiv:2609.40195},
   year={2026}
 }
