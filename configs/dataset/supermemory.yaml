@@ -1,0 +1,15 @@
+# SuperMemory-VQA -- ten subjects, 4-way MCQ, one option always "This question can not be
+# answered." Answer evidence frequently sits in a DIFFERENT session from the question, which
+# is what makes it a memory benchmark rather than a video-QA one.
+#
+# Split by subject: S1-S6 train (3425 q), S7-S8 val (723 q), S9-S10 test (623 q). This is the
+# only benchmark that supplies MemOpt supervision.
+#
+# Sessions are long recordings; the segment grid cuts them.
+
+name: supermemory
+n_choices: 4
+has_asr: true
+has_video: true
+# Sessions carry no day structure, so the reader gets an absolute clock with no day table.
+seconds_per_day: null

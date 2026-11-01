@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memlife"
+version = "1.0.0"
+description = "MemLife: curating and reasoning over long-term egocentric video memories, and MemOpt, its writer RL framework"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+dependencies = [
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "pillow>=10.0",
+    "sentence-transformers>=3.0",
+    "vllm>=0.18",
+    "transformers>=5.0",
+    "decord>=0.6",
+]
+
+[project.optional-dependencies]
+train = [
+    "verl>=0.9.0.dev0",
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+    "requests>=2.31",
+]
+
+[tool.setuptools.packages.find]
+include = ["memlife*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+extend-select = ["E501"]

@@ -1,0 +1,7 @@
+# A recording history of your own, for `python -m memlife.demo`. Videos are placed
+# back-to-back in file-name order on one clock, and transcripts are optional.
+
+name: custom
+has_asr: false
+has_video: true
+seconds_per_day: null

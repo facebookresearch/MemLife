@@ -1,0 +1,15 @@
+# SuperMemory-LVQA -- the SuperMemory-VQA test questions against a ten-subject, ~119-day
+# memory built by concatenating every subject's history onto one clock.
+#
+# No new questions: the ids are unchanged, so every cell is PAIRED with its SuperMemory-VQA
+# cell and the delta is the result rather than the absolute number.
+#
+# No day table, as in SuperMemory-VQA: the concatenated clock's days are an artefact of the
+# one-day gaps between subjects, not days the wearer lived, and the reported LVQA numbers were
+# produced without one.
+
+name: supermemory_lvqa
+n_choices: 4
+has_asr: true
+has_video: true
+seconds_per_day: null

@@ -1,0 +1,20 @@
+# EgoLife-EQA -- 100 test questions about recurring events across days of the EgoLife
+# recordings. Shipped with this repository and fetched automatically on first use.
+#
+# `n_choices` is DECLARATIVE: rows carry 2, 3, 4 or 8 options and every reader threads the
+# record's own count, so nothing reads this at run time. 8 is the maximum, because the
+# frequency-counting questions offer DAY 1..DAY 7 plus NONE.
+#
+# Those questions are MULTI-SELECT. A prediction is correct only if it matches the complete
+# annotated set; memlife/core/mcq.py represents every answer as a canonical set string, so
+# that is the same string comparison single-select uses.
+#
+# The questions are new; the recordings are EgoLifeQA's. Streams, transcripts and the memory
+# store all come from `egolifeqa`, but the questions also cover A3_TASHA, which the EgoLifeQA
+# test build does not write: build this dataset under the same tag and only A3_TASHA is written.
+
+name: egolife_eqa
+n_choices: 8
+has_asr: true
+has_video: true
+seconds_per_day: 86400.0

@@ -1,0 +1,10 @@
+# EgoLifeQA -- 500 questions over one subject's continuous seven-day recording. Test only.
+#
+# The absolute clock is (day - 1) * 86400 + seconds_of_day, so the reader gets a day table and
+# can turn "yesterday" into a time-scoped search.
+
+name: egolifeqa
+n_choices: 4
+has_asr: true
+has_video: true
+seconds_per_day: 86400.0

@@ -1,0 +1,129 @@
+# THE configuration every reported MemLife number was produced with.
+#
+# An overlay may only CHANGE a key that already exists here, and may not change its type
+# (memlife/config.py). So this file is also the complete list of knobs.
+#
+#   memory    how the stream is cut into write units
+#   writer    how one unit becomes one memory entry
+#   reader    how questions are answered from those entries
+#   rewards   MemOpt's supervision
+#   train     MemOpt's optimiser
+#   model     filled from configs/model/<name>.yaml
+#   dataset   filled from configs/dataset/<name>.yaml
+
+seed: 0
+
+memory:
+  # The write unit of the whole method.
+  segment_seconds: 30.0
+  # A trailing remainder shorter than this is folded into the previous segment: a 0.3 s
+  # segment yields eight near-identical frames and a description about nothing.
+  min_tail_seconds: 1.0
+  # Must equal memopt.judge.N_FRAMES -- the faithfulness evaluator scores the pixels the
+  # writer saw, and a mismatch silently makes that a subset.
+  frames_per_segment: 8
+
+writer:
+  # greedy | sampled. Greedy at deployment, for deterministic memory. MemOpt rollouts
+  # override this to `sampled`: a group of identical candidates has no within-group
+  # variation, so the advantage is identically zero.
+  decoding: greedy
+  max_tokens: 512
+  # Segments are independent, so they batch. Raise it if the engine has room.
+  batch_size: 8
+
+reader:
+  decoding: greedy
+
+  # MemLife-V. False gives the reader `search_memory` and `fetch_memory` over written memory
+  # alone; true adds `fetch_video`, which returns frames and the transcript of a window it
+  # explicitly asks for. The paper reports both.
+  source_video: false
+
+  rounds: 10
+  round_max_tokens: 8192
+
+  # Semantic search returns at most this many entries...
+  top_k: 32
+  # ...and interval enumeration at most this many.
+  fetch_memory_limit: 64
+
+  # Read only when source_video is true. The tool advertises the first and clamps to the
+  # second, so a larger request is honoured up to the cap.
+  fetch_video_frames: 30
+  max_fetch_video_frames: 60
+  # The transcript returned beside those frames, in characters. This is the writer's own
+  # budget, so a window the reader deliberately re-watches is never truncated. Retrieved hit
+  # rows carry no transcript at all -- see memlife/memory/tools.py.
+  asr_render_chars_video: 4096
+
+  # null -> derived from the model's reader context minus the headroom below. Context is
+  # compacted, and new frames refused, once the estimate passes it.
+  context_guard_tokens: null
+  context_headroom_tokens: 24000
+
+  # The raw generations, written to a side directory. Scoring never needs them; debugging
+  # always does. The tool trace is always saved -- retrieval recall and MemOpt's
+  # retrievability replay are both computed from it.
+  save_raw: true
+
+rewards:
+  # null -> the same checkpoint as the writer, which token-level faithfulness REQUIRES: the
+  # audit's per-token margins are indexed by the evaluator's tokenization and applied to the
+  # policy's own response positions.
+  judge_model: null
+
+train:
+  # Candidates sampled per segment.
+  rollout_n: 5
+  # Rollouts are sampled; deployment is greedy.
+  temperature: 1.0
+  top_p: 1.0
+  top_k: -1
+
+  max_prompt_length: 12288
+  max_response_length: 512
+
+  # Segments per optimiser step, and the inner mini-batch.
+  train_batch_size: 32
+  ppo_mini_batch_size: 16
+  # Tokens per micro-batch (dynamic batching). Memory only, not the gradient: the logits are
+  # materialised in float32 over a ~250k vocabulary, so verl's default 16384 needs a single
+  # ~15 GiB allocation and the actor update runs out of memory on an 80 GB card.
+  ppo_max_token_len_per_gpu: 8192
+  epochs: 3
+
+  lr: 1.0e-6
+  weight_decay: 0.01
+  grad_clip: 1.0
+
+  # Symmetric policy clipping.
+  clip_ratio: 0.2
+  # KL to the frozen initial writer, applied in the LOSS and not folded into the reward, so
+  # it does not affect the group-relative advantages.
+  kl_loss_coef: 0.01
+  kl_loss_type: low_var_kl
+  entropy_coeff: 0
+
+model:
+  id: null
+  local_path: null
+  family: null
+  grid_factor: 32
+  max_pixels: 0
+  tp: {writer: 1, reader: 1, judge: 1}
+  context: {writer: 0, reader: 0, judge: 0}
+  limit_mm_per_prompt: {writer: 32, reader: 128, judge: 32}
+  gpu_memory_utilization: 0.90
+  max_num_seqs: 16
+  additional_config: {}
+
+dataset:
+  name: null
+  n_choices: 4
+  has_asr: true
+  has_video: true
+  # Length of a day on this dataset's clock, or null where the clock is not day-based. Drives
+  # the reader's day-boundary table, which is the only way it can turn "yesterday" into a
+  # time-scoped search.
+  seconds_per_day: null

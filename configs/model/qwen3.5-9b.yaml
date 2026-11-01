@@ -1,0 +1,41 @@
+# Qwen3.5-9B -- the default writer and reader backbone.
+#
+# Geometry, from the checkpoint's config.json: vision patch 16 x spatial merge 2 -> one token
+# per 32x32 px, so a prepared 704x704 frame is 22x22 = 484 tokens.
+#
+# `max_pixels` is 512 * 32 * 32. It is a CAP, not a transform: preparation already resized the
+# frames to 704x704 = 495616 px, so it is inert on prepared data and only bounds a stray
+# full-resolution input.
+
+id: Qwen/Qwen3.5-9B
+# Staged weights. Leave null to load from the Hub by id. A path that is set but missing
+# RAISES rather than falling back -- in offline mode a fallback would quietly load a cached
+# BASE snapshot instead of the checkpoint you named, which is how a trained writer gets
+# evaluated as the untrained one.
+local_path: null
+family: qwen3.5
+
+grid_factor: 32
+max_pixels: 524288
+
+tp: {writer: 1, reader: 1, judge: 1}
+
+context:
+  writer: 131072
+  # The agentic reader is the only role that can genuinely need a long context.
+  reader: 262144
+  judge: 131072
+
+limit_mm_per_prompt:
+  writer: 32          # 8 per segment, with headroom
+  reader: 128         # a 50-frame fetch_video plus history
+  judge: 32
+
+max_num_seqs: 16
+gpu_memory_utilization: 0.90
+
+# Passed straight to vLLM. Qwen3.5 is a hybrid model whose Gated-DeltaNet prefill kernel is
+# JIT-compiled on first use under the default backend -- i.e. inside engine init's profiling
+# forward, where it can hang indefinitely. Triton needs no JIT.
+additional_config:
+  gdn_prefill_backend: triton

@@ -1,0 +1,23 @@
+# Prepared benchmark data, model weights, and everything a run produces. All of it is
+# reproducible from the code plus the upstream releases, and none of it is small.
+#
+# Anchored with a leading slash so these match ONLY the repository root. An unanchored
+# `data/` also matches `memlife/data/` -- the loader package -- and silently drops it from
+# the commit.
+/data/
+/models/
+/runs/
+
+# ...and because this folder may live inside a parent repository whose own .gitignore has an
+# unanchored `data/`, re-include the package explicitly. A deeper .gitignore wins, but only
+# if it un-ignores the DIRECTORY: git will not look inside an excluded one.
+!memlife/data/
+!memlife/data/**
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/

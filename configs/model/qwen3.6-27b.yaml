@@ -1,0 +1,28 @@
+# Qwen3.6-27B -- the second backbone in the writer/reader generalizability study.
+#
+# Pair it with --store-model to read one backbone's memory with the other's reader, which is
+# how the writer's contribution is separated from the reader's.
+
+id: Qwen/Qwen3.6-27B
+local_path: null
+family: qwen3.6
+
+grid_factor: 32
+max_pixels: 524288
+
+tp: {writer: 4, reader: 4, judge: 2}
+
+context:
+  writer: 131072
+  reader: 262144
+  judge: 131072
+
+limit_mm_per_prompt:
+  writer: 32
+  reader: 128
+  judge: 32
+
+max_num_seqs: 16
+gpu_memory_utilization: 0.90
+
+additional_config: {}
