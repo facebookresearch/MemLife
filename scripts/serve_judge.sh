@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 # Serve the MemOpt evaluator: the frozen model that scores faithfulness and informativeness.
 #
 #   MODEL=Qwen/Qwen3.5-9B scripts/serve_judge.sh 8100

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The evaluator service and its client.
 
 Two of the three FIRM dimensions call a frozen evaluator, and neither can be read off the

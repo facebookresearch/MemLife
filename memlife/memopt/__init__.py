@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """MemOpt: reinforcement learning for the MemLife writer, against the FIRM reward.
 
 Three dimensions, each approximating one term of the information decomposition in the paper:

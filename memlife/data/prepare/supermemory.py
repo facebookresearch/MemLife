@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Prepare SuperMemory-VQA: questions, speech and the recording timeline, from the release.
 
     python -m memlife.data.prepare transcode \

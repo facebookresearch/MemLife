@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """EgoLifeQA: 500 questions over one subject's continuous seven-day recording. Test only.
 
 A day is one prepared file, built by concatenating the release's ~30 s fragments. Those

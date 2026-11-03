@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The MemLife reader: a time-indexed agentic loop over the memory store.
 
 Ten rounds, thinking on, one action per round. Four properties are the reader, and each was

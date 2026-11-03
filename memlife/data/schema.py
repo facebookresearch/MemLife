@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The record types every loader produces and every method consumes.
 
 Three clocks, and mixing them is the single easiest way to get a silently wrong result:

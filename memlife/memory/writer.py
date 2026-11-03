@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The MemLife writer. One description per 30 s segment.
 
 **Every segment is independent.** A description is a function of that segment's frames and

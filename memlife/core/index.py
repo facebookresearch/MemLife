@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Exact cosine retrieval over memory entries, with a causal time filter.
 
 A dense matmul over L2-normalised vectors: exact, no training, no recall cliff. These corpora

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The vLLM engine wrapper, and the one-token Yes/No logprob read the evaluators use.
 
 Roles are grouped into *buckets* that share an engine, so a job that both writes and judges

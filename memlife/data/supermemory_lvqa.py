@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """SuperMemory-LVQA: the same 623 test questions against a ten-subject, ~119-day memory.
 
 Every other benchmark here caps at seven days of history (EgoLifeQA) or a fraction of a day (a

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The memory store: one entry per segment, plus the index over their descriptions.
 
 An :class:`Entry` is what the writer produced for one 30 s segment and everything the reader

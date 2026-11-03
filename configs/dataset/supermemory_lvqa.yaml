@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 # SuperMemory-LVQA -- the SuperMemory-VQA test questions against a ten-subject, ~119-day
 # memory built by concatenating every subject's history onto one clock.
 #

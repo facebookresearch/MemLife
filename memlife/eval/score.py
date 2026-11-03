@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Score a finished prediction directory. **Always recomputed from the files, never cached.**
 
 A run commits rows continuously, so any number remembered from a previous look is stale. Every

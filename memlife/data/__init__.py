@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Benchmark loaders. Every one exposes ``load(split, *, limit)`` and ``get_stream(id)``.
 
 ``STORE_DATASET`` names the prepared dataset whose recordings, transcripts and memory store a

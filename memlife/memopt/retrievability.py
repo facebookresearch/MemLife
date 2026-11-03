@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Retrievability: would this memory actually be returned at question time?
 
     R_ret(c, y) = mean over q in Q(c) of  1[ y in C_q ]

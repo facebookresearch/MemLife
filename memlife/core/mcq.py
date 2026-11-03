@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Multiple-choice formatting and answer parsing, for A--H and for multi-select.
 
 Every answer -- single or multi -- is represented as the **canonical set string**: the chosen

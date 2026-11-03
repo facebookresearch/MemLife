@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """SuperMemory-VQA: ten subjects, split S1--S6 / S7--S8 / S9--S10 (:mod:`memlife.data.splits`).
 
 One subject is one memory stream -- all of that person's sessions on a single monotonic clock.

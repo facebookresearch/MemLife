@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """JSON/JSONL I/O, content fingerprints, and the per-question output contract.
 
 Writes go through a temp file and a rename, so a job killed mid-write leaves either the old

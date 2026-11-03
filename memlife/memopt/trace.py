@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Build the retrievability replay table from the reader's own cached actions.
 
     # once per epoch, after rebuilding the memory bank with the current writer

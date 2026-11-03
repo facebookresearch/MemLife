@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 # THE configuration every reported MemLife number was produced with.
 #
 # An overlay may only CHANGE a key that already exists here, and may not change its type

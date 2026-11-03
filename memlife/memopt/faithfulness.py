@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Faithfulness: is every token of this memory supported by its source segment?
 
     R_faith[i,t] = 1 - ( max_w p_audit(w | c, y_i, y_i,<t) - p_audit(y_i,t | c, y_i, y_i,<t) )

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Every prompt MemLife uses. One file, so a prompt change is one reviewable diff.
 
 **The wording is the method.** These are the strings the reported numbers were produced with;

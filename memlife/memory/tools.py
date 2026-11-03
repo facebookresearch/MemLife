@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The reader's tools, and how their results are rendered back to the model.
 
 :class:`Tools` owns everything a call needs -- the store, the stream's video timeline, the

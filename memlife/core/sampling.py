@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Sampling profiles per role, and thinking-mode control per model family.
 
 Every generation in this repository goes through one of the named roles below, so "what

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Prepare the EgoLife recordings: merge the clips into runs, and put the speech on their clock.
 
     python -m memlife.data.prepare egolife --src raw/EgoLife

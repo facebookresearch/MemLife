@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """EgoLife-EQA: 100 test questions about recurring events across days of the EgoLife recordings.
 
 Three question types, 45 / 31 / 24 of them:

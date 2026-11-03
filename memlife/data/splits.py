@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Benchmark splits. **The single source of truth** -- no loader may hardcode a subject list.
 
 SuperMemory-VQA is split **by subject**, not by question, because the unit of memory is a

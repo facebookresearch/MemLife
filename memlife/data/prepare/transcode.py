@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Re-encode every source video to ``fit_dims(w, h, MAX_PIXELS)`` -- once, at preparation time.
 
     python -m memlife.data.prepare transcode --src raw/SuperMemory-VQA/data/video \

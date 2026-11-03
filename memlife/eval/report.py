@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Print the numbers for one or more finished runs.
 
     python -m memlife.eval.report --dataset egolife_eqa --tag memlife --tag memlife_memopt

@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Text embeddings. One model, one normalisation, one device policy.
 
 ``BAAI/bge-large-en-v1.5``, 1024-d, L2-normalised -- so an inner product *is* cosine and the

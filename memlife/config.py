@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Configuration: one base file, plus overlays for the model and the dataset.
 
     cfg = config.load(dataset="supermemory", model="qwen3.5-9b")

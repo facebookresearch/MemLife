@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Every filesystem path resolves from here. Nothing else may hardcode one.
 
 One environment variable, ``MEMLIFE_ROOT``, anchors the tree. It defaults to the repository

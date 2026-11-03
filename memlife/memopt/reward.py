@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The trainer's reward hook: score ONE sampled memory on all three FIRM dimensions.
 
     reward.custom_reward_function.path=pkg://memlife.memopt.reward

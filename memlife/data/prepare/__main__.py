@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """``python -m memlife.data.prepare <step>`` -- one entry point for the whole preparation.
 
 Each step is a module with its own ``main()``; this only routes, so ``--help`` on a step is

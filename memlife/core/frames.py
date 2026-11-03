@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Frame sampling. ``n`` frames spread evenly over a file-relative time window.
 
 **Times here are FILE-RELATIVE seconds, never the dataset's absolute clock.** Passing the

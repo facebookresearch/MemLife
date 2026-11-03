@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 # SuperMemory-VQA -- ten subjects, 4-way MCQ, one option always "This question can not be
 # answered." Answer evidence frequently sits in a DIFFERENT session from the question, which
 # is what makes it a memory benchmark rather than a video-QA one.

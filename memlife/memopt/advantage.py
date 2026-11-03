@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """The MemOpt advantage: token-level, group-relative, length-fair.
 
 For each training segment the writer samples a group of ``G`` candidates. The three FIRM

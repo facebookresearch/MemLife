@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Gold retrieval targets: which memory entries a question's answer actually lives in.
 
 Retrieval recall needs a set of segment ids per question, but the benchmarks annotate time, so
